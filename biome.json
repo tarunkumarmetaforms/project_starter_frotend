@@ -1,0 +1,73 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "error",
+        "noVoid": "error",
+        "useOptionalChain": "error",
+        "noForEach": "warn"
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "useExhaustiveDependencies": "error",
+        "noConstantCondition": "error"
+      },
+      "performance": {
+        "noDelete": "error",
+        "noAccumulatingSpread": "warn"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "error"
+      },
+      "style": {
+        "noArguments": "error",
+        "noNegationElse": "warn",
+        "useShorthandArrayType": "error",
+        "useSingleCaseStatement": "error",
+        "useTemplate": "error",
+        "noImplicitBoolean": "warn",
+        "noParameterAssign": "error"
+      },
+      "suspicious": {
+        "noExplicitAny": "warn",
+        "noEmptyBlockStatements": "error",
+
+        "noRedundantUseStrict": "error"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "ignore": ["node_modules", "dist", "build", "coverage", "**/*.min.js"]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "always"
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "include": ["src/**/*.{ts,tsx,js,jsx,mjs,cjs}"],
+    "ignore": [
+      "**/*.d.ts",
+      "**/*.config.{js,ts}",
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/dist/**"
+    ]
+  }
+}
